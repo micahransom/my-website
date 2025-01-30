@@ -1,0 +1,162 @@
+/* Variables for your color palette */
+:root {
+    /* Primary Colors */
+    --primary-100: #E6F3FF;
+    --primary-300: #80BFFF;
+    --primary-500: #1A8CFF;
+    --primary-700: #0066CC;
+    --primary-900: #003366;
+
+    /* Neutral Colors */
+    --neutral-100: #F5F5F5;
+    --neutral-300: #D4D4D4;
+    --neutral-500: #737373;
+    --neutral-700: #404040;
+    --neutral-900: #171717;
+
+    /* Accent Colors */
+    --accent-green: #4CAF50;
+    --accent-red: #F44336;
+    --accent-yellow: #FFC107;
+}
+@keyframes float {
+    0% { transform: translate(-50%, -50%) translateY(0px); }
+    50% { transform: translate(-50%, -50%) translateY(-10px); }
+    100% { transform: translate(-50%, -50%) translateY(0px); }
+}
+/* Base Styles */
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    font-family: 'Tahoma', 'Roboto', sans-serif; /* Bold, modern font */
+    font-weight: 800;
+    background: #121212; /* Fallback background */
+}
+
+/* Particle Background */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensures it's behind the text */
+}
+
+/* Typography */
+h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: float 3s ease-in-out infinite;
+    text-align: center;  /* ✅ Ensures text is centered */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* ✅ Centers the element */
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+    color: var(--primary-500);
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 1.5rem 0 1rem;
+    color: var(--neutral-700);
+}
+
+p {
+    font-size: 1rem;
+    margin: 1rem 0;
+}
+
+/* Navigation */
+nav {
+    margin-bottom: 2rem;
+}
+
+nav a {
+    color: var(--primary-500);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--primary-700);
+    text-decoration: underline;
+}
+
+/* Color Swatches (for style guide) */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.color-swatch {
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* Typography Examples (for style guide) */
+.type-example {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid var(--neutral-300);
+    border-radius: 8px;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.button-primary {
+    background-color: var(--primary-500);
+    color: white;
+}
+
+.button-primary:hover {
+    background-color: var(--primary-700);
+}
+
+.button-secondary {
+    background-color: var(--neutral-300);
+    color: var(--neutral-900);
+}
+
+.button-secondary:hover {
+    background-color: var(--neutral-500);
+    color: white;
+}
+
+.button-accent {
+    background-color: var(--accent-green);
+    color: white;
+}
+
+.button-accent:hover {
+    background-color: #3d8b40;
+}
