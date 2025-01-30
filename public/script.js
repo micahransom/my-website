@@ -19,20 +19,15 @@ document.addEventListener("DOMContentLoaded", function () {
         interactivity: {
             detect_on: "canvas",
             events: {
-                onhover: { enable: true, mode: "repulse" },
+                onhover: { enable: true, mode: "grab" },
                 onclick: { enable: true, mode: "push" },
                 resize: true
             },
             modes: {
-                repulse: { distance: 100, duration: 0.4 },
+                grab: { distance: 200, line_linked: { opacity: 0.5 } },
                 push: { particles_nb: 4 }
             }
-            events: {
-                onhover: { enable: true, mode: "grab" },
-            },
-            modes: {
-                grab: { distance: 200, line_linked: { opacity: 0.5 } }
-            }
+            
         }
     });
 });

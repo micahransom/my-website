@@ -19,7 +19,11 @@
     --accent-red: #F44336;
     --accent-yellow: #FFC107;
 }
-
+@keyframes float {
+    0% { transform: translate(-50%, -50%) translateY(0px); }
+    50% { transform: translate(-50%, -50%) translateY(-10px); }
+    100% { transform: translate(-50%, -50%) translateY(0px); }
+}
 /* Base Styles */
 body {
     margin: 0;
@@ -51,6 +55,12 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 3px;
     text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: float 3s ease-in-out infinite;
+    text-align: center;  /* ✅ Ensures text is centered */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* ✅ Centers the element */
 }
 
 h2 {
